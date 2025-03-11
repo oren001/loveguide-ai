@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LoveGuide AI</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="app-header">
+            <h1>LoveGuide AI</h1>
+            <p class="tagline">Your personal relationship guide</p>
+        </div>
+
+        <div class="profile-selector">
+            <button class="profile-btn" data-profile="Partner 1">Partner 1</button>
+            <button class="profile-btn" data-profile="Partner 2">Partner 2</button>
+        </div>
+
+        <div class="selected-profile">
+            Not selected
+        </div>
+
+        <div class="chat-container">
+            <div class="messages" id="messages">
+                <!-- Messages will be inserted here -->
+            </div>
+
+            <div class="input-container">
+                <textarea 
+                    id="message-input" 
+                    placeholder="Share your thoughts with LoveGuide..." 
+                    rows="3"
+                ></textarea>
+                <button id="send-button">Send</button>
+            </div>
+        </div>
+
+        <div class="sharing-panel hidden" id="sharing-panel">
+            <h3>Share with Partner</h3>
+            <p>LoveGuide suggests sharing this insight with your partner:</p>
+            <div class="sharing-content" id="sharing-content"></div>
+            <div class="sharing-buttons">
+                <button id="share-approve">Share</button>
+                <button id="share-edit">Edit</button>
+                <button id="share-cancel">Cancel</button>
+            </div>
+        </div>
+    </div>
+    <script src="/static/js/loveguide.js"></script>
+</body>
+</html>

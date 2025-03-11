@@ -1,0 +1,225 @@
+/* Base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f8f9fa;
+    color: #343a40;
+    height: 100vh;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+/* Header styles */
+.app-header {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: #4e73df;
+    color: white;
+}
+
+.app-header h1 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.tagline {
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+/* Profile selector */
+.profile-selector {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.profile-btn {
+    padding: 0.5rem 1.5rem;
+    border: none;
+    border-radius: 20px;
+    background-color: #e9ecef;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.profile-btn:hover {
+    background-color: #dee2e6;
+}
+
+.profile-btn.active {
+    background-color: #4e73df;
+    color: white;
+}
+
+.selected-profile {
+    text-align: center;
+    color: #6c757d;
+    font-size: 0.9rem;
+    padding: 0.5rem;
+    background-color: #f8f9fa;
+}
+
+/* Chat container */
+.chat-container {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* Messages area */
+.messages {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.message {
+    padding: 0.75rem 1rem;
+    border-radius: 10px;
+    max-width: 80%;
+    word-wrap: break-word;
+    position: relative;
+    line-height: 1.5;
+}
+
+.message.sent {
+    background-color: #4e73df;
+    color: white;
+    align-self: flex-end;
+    border-bottom-right-radius: 0;
+}
+
+.message.received {
+    background-color: #f1f3f5;
+    color: #343a40;
+    align-self: flex-start;
+    border-bottom-left-radius: 0;
+}
+
+.message.loveguide {
+    background-color: #e3f2fd;
+    color: #0d47a1;
+    align-self: flex-start;
+    border-bottom-left-radius: 0;
+    border-left: 4px solid #4e73df;
+}
+
+/* Input area */
+.input-container {
+    padding: 1rem;
+    background-color: #f8f9fa;
+    border-top: 1px solid #e9ecef;
+    display: flex;
+    gap: 1rem;
+}
+
+#message-input {
+    flex-grow: 1;
+    padding: 0.75rem;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    resize: none;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+#send-button {
+    padding: 0.75rem 1.5rem;
+    background-color: #4e73df;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+#send-button:hover {
+    background-color: #375abd;
+}
+
+/* Sharing panel */
+.sharing-panel {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 800px;
+    background-color: white;
+    padding: 1rem;
+    box-shadow: 0 -5px 20px rgba(0,0,0,0.1);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.sharing-panel.hidden {
+    transform: translate(-50%, 100%);
+}
+
+.sharing-content {
+    background-color: #f8f9fa;
+    padding: 1rem;
+    border-radius: 5px;
+    margin: 1rem 0;
+    border-left: 4px solid #4e73df;
+}
+
+.sharing-buttons {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: flex-end;
+}
+
+.sharing-buttons button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+#share-approve {
+    background-color: #4e73df;
+    color: white;
+}
+
+#share-edit {
+    background-color: #f8f9fa;
+    color: #343a40;
+    border: 1px solid #ced4da;
+}
+
+#share-cancel {
+    background-color: #f8f9fa;
+    color: #dc3545;
+    border: 1px solid #ced4da;
+}
+
+.hidden {
+    display: none;
+}
